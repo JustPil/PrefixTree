@@ -2,7 +2,7 @@ package trie;
 
 import java.util.Stack;
 
-public class Trie
+public class Trie implements TrieInterface
 {
     private final Node ROOT = new Node('*');
 
