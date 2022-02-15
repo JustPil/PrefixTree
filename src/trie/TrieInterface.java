@@ -1,7 +1,6 @@
 package trie;
 
-public interface TrieInterface
-{
+public interface TrieInterface {
     Node ROOT = new Node('*');
     boolean addWord(String word);
     boolean deleteWord(String word);
