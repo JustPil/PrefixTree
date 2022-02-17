@@ -7,6 +7,25 @@ public class Main {
     public static void main(String[] args) {
         Trie trie = new Trie();
         Scanner scn = new Scanner(System.in);
+        testDriver(scn, trie);
+        scn.close();
+    }
+
+    /**
+     * menu A menu of choices for interacting with the Prefix Tree.
+     */
+    public static void menu() {
+        System.out.print("Methods for Prefix Tree (Trie)\n1 - ADD WORD - Adds a word to the Trie\n2 - DELETE" +
+                " WORD - Deletes a word from the Trie\n3 - SEARCH WORD - Searches for a word in the Trie\n4 - " +
+                "SEARCH PREFIX - Searches the Trie for a prefix\nX - Terminate\n\nEnter choice: ");
+    }
+
+    /**
+     * testDriver A test driver for interacting with a Trie object.
+     * @param scn A Scanner object for user input.
+     * @param trie A Trie object.
+     */
+    public static void testDriver(Scanner scn, Trie trie) {
         String choice = "";
         while(!choice.equalsIgnoreCase("X")) {
             menu();
@@ -33,14 +52,5 @@ public class Main {
                 System.out.println("Invalid choice");
             }
         }
-    }
-
-    /**
-     * menu A menu of choices for interacting with the Prefix Tree.
-     */
-    public static void menu() {
-        System.out.print("Methods for Prefix Tree (Trie)\n1 - ADD WORD - Adds a word to the Trie\n2 - DELETE" +
-                " WORD - Deletes a word from the Trie\n3 - SEARCH WORD - Searches for a word in the Trie\n4 - " +
-                "SEARCH PREFIX - Searches the Trie for a prefix\nX - Terminate\n\nEnter choice: ");
     }
 }
